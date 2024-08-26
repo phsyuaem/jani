@@ -99,37 +99,38 @@
 /* Media Queries for Mobile-Specific Image Styles */
 @media only screen and (max-width: 600px) {
     .background {
-        content: url(https://i.imgur.com/731deEd.png);
+        content: url('https://i.imgur.com/731deEd.png');
         width: 100vw;
-        height: 97vh;
+        height: 100vh; /* Ensures the background covers the entire screen */
         object-fit: cover;
+        bottom: 15%; /* Align with other elements */
     }
     
     .mountain {
-                content: url(https://i.imgur.com/2xxFWvu.png);
+        content: url('https://i.imgur.com/2xxFWvu.png');
         left: 0;
         height: auto;
-        width: 90%;
-        bottom: 7%;
+        width: 100%;
+        bottom: 10%; /* Align with other elements */
     }
 
     .person {
-        content: url(https://i.imgur.com/X9nmMNI.png);
+        content: url('https://i.imgur.com/X9nmMNI.png');
         width: 100%;
         height: auto;
-        bottom: 2%;
+        bottom: 6%; /* Move up */
     }
 
     .smoke1 {
-                height: 50%;
-        width: 100%;
-        bottom: 2%;
+        height: 60%;
+        width: auto;
+        bottom: 6%; /* Move up */
     }
 
     .smoke2 {
         width: 100%;
-        height: 50%;
-        bottom: 2%;
+        height: auto;
+        bottom: 6%; /* Move up */
     }
 
     .container1 h1 {
@@ -168,3 +169,26 @@
         filter: blur(0px);
     }
 }
+
+/* Scroll Animation */
+let background = document.querySelector(".background");
+let person = document.querySelector(".person");
+let mountain = document.querySelector(".mountain");
+let smoke1 = document.querySelector(".smoke1");
+let smoke2 = document.querySelector(".smoke2");
+let text = document.querySelector("h1");
+
+const scrollHandle = (e) => {
+  let scroll = window.scrollY;
+
+  text.style.transform = `translate(-50%, -50%) translate3d(0, ${
+    scroll * 0.85
+  }px, 0)`;
+  background.style.transform = `translate3d(0, ${scroll * 0.9}px, 0)`;
+  mountain.style.transform = `translate3d(0, ${scroll * 0.85}px, 0)`;
+  smoke1.style.transform = `translate3d(0, ${scroll * 0.7}px, 0)`;
+  smoke2.style.transform = `translate3d(0, ${scroll * 0.3}px, 0)`;
+  person.style.transform = `translate3d(0, ${scroll * 0.25}px, 0)`;
+};
+
+window.addEventListener("scroll", scrollHandle);
