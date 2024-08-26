@@ -11,11 +11,11 @@ const scrollHandle = (e) => {
   text.style.transform = `translate(-50%, -50%) translate3d(0, ${
     scroll * 0.85
   }px, 0)`;
-  background.style.transform = `translate3d(0, ${scroll * 0.9}px, 0)`;
-  mountain.style.transform = `translate3d(0, ${scroll * 0.85}px, 0)`;
-  smoke1.style.transform = `translate3d(0, ${scroll * 0.7}px, 0)`;
-  smoke2.style.transform = `translate3d(0, ${scroll * 0.3}px, 0)`;
-  person.style.transform = `translate3d(0, ${scroll * 0.25}px, 0)`;
+  background.style.transform = `translate3d(0, ${scroll}px, 0)`;
+  mountain.style.transform = `translate3d(0, ${scroll * 0.80}px, 0)`;
+  smoke1.style.transform = `translate3d(0, ${scroll * 0.25}px, 0)`;
+  smoke2.style.transform = `translate3d(0, ${scroll * 0.50}px, 0)`;
+  person.style.transform = `translate3d(0, ${scroll * 0.45}px, 0)`;
 };
 
 window.addEventListener("scroll", scrollHandle);
