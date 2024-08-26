@@ -99,22 +99,22 @@
 /* Media Queries for Mobile-Specific Image Styles */
 @media only screen and (max-width: 600px) {
     .container1 {
-        width: 100vw;
+        /* width: 100vw;
         height: 100vh;
-        position: relative;
+        position: relative; */
     }
 
     .background {
         width: 100vw;
-        height: 100vh; /* Ensures the background covers the entire screen */
+        height: 85vh; /* Ensures the background covers the entire screen */
         object-fit: cover;
     }
     
     .mountain {
-        left: -67px;
-        height: auto;
-        width: 232%;
-        bottom: 0%;
+        left: 2px;
+        height: 70vh;
+        width: 90vh;
+        bottom: 3%;
     }
 
     .person {
@@ -123,14 +123,14 @@
     }
 
     .smoke1 {
-        height: 60%;
+        height: 50vh;
         width: auto;
         bottom: 0%;
     }
 
     .smoke2 {
         width: 100%;
-        height: auto;
+        height: 50vh;
         bottom: 0%;
     }
 
