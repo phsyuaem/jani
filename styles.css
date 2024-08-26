@@ -99,36 +99,36 @@
 /* Media Queries for Mobile-Specific Image Styles */
 @media only screen and (max-width: 600px) {
     .background {
-        content: url('https://i.imgur.com/731deEd.png');
+        content: url(https://i.imgur.com/731deEd.png);
         width: 100vw;
-        height: 100vh; /* Ensures the background covers the entire screen */
+        height: 120vh;
         object-fit: cover;
     }
     
     .mountain {
-        content: url('https://i.imgur.com/2xxFWvu.png');
+        content: url(https://i.imgur.com/2xxFWvu.png);
         left: 0;
         height: auto;
-        width: 100%;
+        width: 90%;
         bottom: 0%;
     }
 
     .person {
-        content: url('https://i.imgur.com/X9nmMNI.png');
+        content: url(https://i.imgur.com/X9nmMNI.png);
         width: 100%;
         height: auto;
         bottom: 0%;
     }
 
     .smoke1 {
-        height: 60%;
-        width: auto;
+        height: 50%;
+        width: 100%;
         bottom: 0%;
     }
 
     .smoke2 {
         width: 100%;
-        height: auto;
+        height: 50%;
         bottom: 0%;
     }
 
